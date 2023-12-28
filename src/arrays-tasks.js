@@ -300,8 +300,10 @@ function propagateItemsByPositionIndex(arr) {
  *   [ 1,2,3,4,5,6,7,8,9,10 ] => [ 10, 9, 8 ]
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
-function get3TopItems(/* arr */) {
-  throw new Error('Not implemented');
+function get3TopItems(arr) {
+  const resArr = arr.sort((a, b) => a - b).reverse();
+  resArr.length = 3;
+  return resArr.filter((item) => item);
 }
 
 /**
