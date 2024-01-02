@@ -433,8 +433,16 @@ function getFalsyValuesCount(arr) {
  *                              [0,0,0,1,0],
  *                              [0,0,0,0,1]]
  */
-function getIdentityMatrix(/* n */) {
-  throw new Error('Not implemented');
+function getIdentityMatrix(n) {
+  const arr = [];
+  arr.length = n;
+  arr.fill(0);
+  const matrix = [];
+  matrix.length = n;
+  matrix.fill(arr);
+  return matrix.map((item, index) =>
+    item.map((el, ind) => (ind === index ? el + 1 : el))
+  );
 }
 
 /**
@@ -448,8 +456,13 @@ function getIdentityMatrix(/* n */) {
  *    getIndicesOfOddNumbers([2, 4, 6, 8, 10]) => []
  *    getIndicesOfOddNumbers([11, 22, 33, 44, 55]) => [0, 2, 4]
  */
-function getIndicesOfOddNumbers(/* numbers */) {
-  throw new Error('Not implemented');
+function getIndicesOfOddNumbers(numbers) {
+  const resArr = [];
+  numbers.map((item, index) => {
+    if (item % 2) resArr.push(index);
+    return '';
+  });
+  return resArr;
 }
 
 /**
