@@ -25,10 +25,11 @@ function getIntervalArray(start, end) {
   resArr.length = end - start + 1;
   resArr.fill(0);
   let i = start - 1;
-  return resArr.map((item) => {
+  const res = resArr.map((item) => {
     i += 1;
     return item + i;
   });
+  return Array.from(res);
 }
 
 /**
